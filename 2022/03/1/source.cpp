@@ -33,26 +33,23 @@ int main() {
     int sum = 0;
 
     std::for_each(std::begin(data), std::end(data), [&sum](auto & element) {
-        auto & str1 = element.first;
-        auto & str2 = element.second;
+        auto & v1 = element.first;
+        auto & v2 = element.second;
 
-        for(int i = 0; i < str1.length(); ++i) {
-            auto & c1 = str1[i];
+        std::vector<char> v_intersection;
+        
+        std::sort(v1.begin(), v1.end());
+        std::sort(v2.begin(), v2.end());
+        std::set_intersection(v1.begin(), v1.end(),
+                            v2.begin(), v2.end(),
+                            std::back_inserter(v_intersection));
 
-            for(int k = 0; k < str2.length(); ++k) {
-                auto & c2 = str2[k];
-                if(c1 == c2) {
-                    if(std::islower(c1)) {
-                        sum += c1 - 96;
-                    } else {
-                        sum += c1 - 64 + 26;
-                    }
-                    goto end;
-                }
-            }
+        auto & c = v_intersection[0];
+        if(std::islower(c)) {
+            sum += c - 96;
+        } else {
+            sum += c - 64 + 26;
         }
-end:
-        (void)0;
     });
 
     std::cout << sum << std::endl;
