@@ -24,8 +24,7 @@ int main() {
             //...
         } else {
             data.push_back(std::make_pair(
-                line.substr(0, line.length()/2), line.substr(line.length()/2)
-                )
+                line.substr(0, line.length()/2), line.substr(line.length()/2))
             );
         }
     }
