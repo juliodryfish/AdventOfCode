@@ -16,70 +16,14 @@ int main() {
     Stacks_t data;
     
     // Yes I'm lazy, fight me. (x2)
-    data[0].push('B');
-    data[0].push('L');
-    data[0].push('D');
-    data[0].push('T');
-    data[0].push('W');
-    data[0].push('C');
-    data[0].push('F');
-    data[0].push('M');
-
-    data[1].push('N');
-    data[1].push('B');
-    data[1].push('L');
-
-    data[2].push('J');
-    data[2].push('C');
-    data[2].push('H');
-    data[2].push('T');
-    data[2].push('L');
-    data[2].push('V');
-
-    data[3].push('S');
-    data[3].push('P');
-    data[3].push('J');
-    data[3].push('W');
-
-    data[4].push('Z');
-    data[4].push('S');
-    data[4].push('C');
-    data[4].push('F');
-    data[4].push('T');
-    data[4].push('L');
-    data[4].push('R');
-
-    data[5].push('W');
-    data[5].push('D');
-    data[5].push('G');
-    data[5].push('B');
-    data[5].push('H');
-    data[5].push('N');
-    data[5].push('Z');
-
-    data[6].push('F');
-    data[6].push('M');
-    data[6].push('S');
-    data[6].push('P');
-    data[6].push('V');
-    data[6].push('G');
-    data[6].push('C');
-    data[6].push('N');
-
-    data[7].push('W');
-    data[7].push('Q');
-    data[7].push('R');
-    data[7].push('J');
-    data[7].push('F');
-    data[7].push('V');
-    data[7].push('C');
-    data[7].push('Z');
-
-    data[8].push('R');
-    data[8].push('P');
-    data[8].push('M');
-    data[8].push('L');
-    data[8].push('H');
+    data[0].push('B');data[1].push('N');data[2].push('J');data[3].push('S');data[4].push('Z');data[5].push('W');data[6].push('F');data[7].push('W');data[8].push('R');
+    data[0].push('L');data[1].push('B');data[2].push('C');data[3].push('P');data[4].push('S');data[5].push('D');data[6].push('M');data[7].push('Q');data[8].push('P');
+    data[0].push('D');data[1].push('L');data[2].push('H');data[3].push('J');data[4].push('C');data[5].push('G');data[6].push('S');data[7].push('R');data[8].push('M');
+    data[0].push('T');                  data[2].push('T');data[3].push('W');data[4].push('F');data[5].push('B');data[6].push('P');data[7].push('J');data[8].push('L');
+    data[0].push('W');                  data[2].push('L');                  data[4].push('T');data[5].push('H');data[6].push('V');data[7].push('F');data[8].push('H');
+    data[0].push('C');                  data[2].push('V');                  data[4].push('L');data[5].push('N');data[6].push('G');data[7].push('V');
+    data[0].push('F');                                                      data[4].push('R');data[5].push('Z');data[6].push('C');data[7].push('C');
+    data[0].push('M');                                                                                          data[6].push('N');data[7].push('Z');
 
     std::ifstream input_file("../input.txt");
     std::string line;
