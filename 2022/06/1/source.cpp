@@ -13,17 +13,15 @@ int main() {
 
     std::ifstream input_file("../input.txt");
     std::string line;
-    int result;
     while(std::getline(input_file, line)) {
         for(int index = 0; index < (line.size() - 4); ++index) {
             auto sop = line.substr(index, 4);
             std::sort(sop.begin(), sop.end());
             if(std::unique(sop.begin(), sop.end()) == sop.end()) {
-                result = index + 4;
-                break;
+                std::cout << index + 4 << std::endl;
+                return 0;
             }
         }
     }
-    std::cout << result << std::endl;
     return 0;
 }
